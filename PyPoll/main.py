@@ -31,11 +31,8 @@ with open(csvpath) as pyroll_file:
     for row in election_csv:
         count += 1
 
-        if row[2] == (next(iter((row[2])))):
-            candidate_list.append(row[2]) != candidate_list
-        else: 
-            #row[2] != (next(iter((row[2])))):
-            candidate_list.append(row[2]) == candidate_list
+        if row[2] not in candidate_list:
+            candidate_list.append(row[2])
     
 
 print("Election Results")
